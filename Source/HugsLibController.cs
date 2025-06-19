@@ -83,8 +83,9 @@ namespace HugsLib {
 		}
 
 		private static void CreateSceneObject() {
-			// this must execute in the main thread
-			LongEventHandler.ExecuteWhenFinished(() => {
+            // this must execute in the main thread
+            LongEventHandler.ExecuteWhenFinished(() =>
+            {
 				if (GameObject.Find(SceneObjectName) != null) {
 					Logger.Error("Another version of the library is already loaded. The HugsLib assembly should be loaded as a standalone mod.");
 					return;
